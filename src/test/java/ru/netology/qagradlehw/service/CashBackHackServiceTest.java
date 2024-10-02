@@ -1,16 +1,16 @@
 package ru.netology.qagradlehw.service;
 
-import org.testng.annotations.Test;
-import org.testng.Assert;
+import org.junit.Test;
+import org.junit.Assert;
 
 public class CashBackHackServiceTest {
     @Test
     public void remainTest(){
         CashBackHackService service = new CashBackHackService();
 
-        Assert.assertEquals(service.remain(900), 100);
-        Assert.assertEquals(service.remain(500), 500);
-        Assert.assertEquals(service.remain(1000), 0);
-        Assert.assertEquals(service.remain(750), 250);
+        Assert.assertEquals(100, service.remain(900));
+        Assert.assertEquals(500, service.remain(500));
+        Assert.assertEquals(0, service.remain(1000));
+        Assert.assertEquals(250, service.remain(750));
     }
 }
